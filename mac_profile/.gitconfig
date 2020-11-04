@@ -1,0 +1,20 @@
+[user]
+	name = el-mostafa.dahni@atleadit.com
+	email = el-mostafa.dahni@atleadit.com
+[credential]
+	helper = 
+	helper = manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[diff]
+	tool = p4merge
+[difftool "p4merge"]
+	path = /Applications/p4merge.app/Contents/MacOS/p4merge
+[difftool]
+	prompt = false
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	path = /Applications/p4merge.app/Contents/MacOS/p4merge
+[mergetool]
+	prompt = false
