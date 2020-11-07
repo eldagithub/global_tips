@@ -1,0 +1,28 @@
+	
+		a. create a CA : Depuis trousseau > assistant certificat > create CA
+		
+		b. Export la clés privé du CA -> ca.p12
+		
+		c. Convertir la p12 en key 
+			openssl pkcs12 -in ca.p12 -nodes -out ca.key -nocerts
+		
+		d. Créer le CSR
+			openssl req -new -key ca.key -out server.csr
+		
+		e. Créer le certificat
+			openssl x509 -req -days 3650 -in server.csr -signkey ca.key -out  server.crt
+		
+		f. Import de server.crt dans le trousseau (deux click)
+		
+		g. Ajout du root cert dans azure ( ajouter une ligne dans azure point to site config, le public certificat data = server.crt sans retour à la ligne  
+		
+		h. Depuis azure telecharger leVPN client (p2S config)
+		
+		i. Dans mac configurer un nouveau vpn 
+			i. Preference reseaux > add vpn
+			ii. Adresse server=identifian distant=server dans le setting.xml du client vpn az
+			iii. Reglage auth > aucun > certificat > choisir celui du cert importé en pt F 
+
+ https://www.youtube.com/watch?v=cEbIvDrWnno
+https://github.com/chrisvugrinec/azure-vpn-point2site
+
