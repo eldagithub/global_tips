@@ -1,0 +1,20 @@
+
+
+#mysql
+docker search mysql
+docker pull mysql/mysql-server:8.0.22-1.1.18
+
+
+docker run --name=mysql1 -e MYSQL_ROOT_PASSWORD=pass -p 3306:3306 -d mysql/mysql-server 
+docker logs mysql1
+docker logs mysql1 2>&1 | grep GENERATED
+docker exec -ti mysql1 mysql -uroot -p
+
+docker run --name=mysql1 --restart on-failure -e MYSQL_ROOT_PASSWORD=pass -p 3306:3306 -d mysql/mysql-server
+
+vi my.cnf
+mkdir datadit
+docker run --name=mysql1 -e MYSQL_ROOT_PASSWORD=pass -p 3306:3306 \
+   --mount type=bind,src=$(pwd)/my.cnf,dst=/etc/my.cnf \
+   --mount type=bind,src=$(pwd)/datadir,dst=/var/lib/mysql \
+   -d mysql/mysql-server
