@@ -49,3 +49,5 @@ docker network inspect -f \
 '{{json .Containers}}' 9f6bc3c15568 | \
 jq '.[] | .Name + ":" + .IPv4Address'
 
+docker exec -it host8090  bash -l
+
