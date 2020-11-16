@@ -1,0 +1,5 @@
+#start vm  without GUI
+VBoxManage  startvm "Debian_10.6.0_VB_LinuxVMImages.com" --type headless
+
+#stop vm
+VBoxManage controlvm "Debian_10.6.0_VB_LinuxVMImages.com"  poweroff
