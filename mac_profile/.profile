@@ -5,6 +5,9 @@ alias mysqlstart='mysql.server start'
 alias mysqlstop='mysql.server stop' 
 #alias mysqlstop='sudo /usr/local/mysql/support-files/mysql.server stop' 
 alias ssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
+alias gogit='cd /Users/elmos/OneDrive/TECH/github'
+alias gitcom='git add .; git commit -m "${PWD##*/} at `date ` " '
+
 
 #curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 #source ~/git-completion.sh
