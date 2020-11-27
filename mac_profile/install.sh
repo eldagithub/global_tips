@@ -8,3 +8,4 @@ cat ./.profile >> ~/.profile
 
 cp -i ./git*.sh ~/
 
+source ~/.profile
