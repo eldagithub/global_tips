@@ -1,0 +1,30 @@
+docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+docker cp repo:/git/getting-started/ .
+docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+docker cp repo:/git/getting-started/ .
+docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+docker cp repo:/git/getting-started/ .
+docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+docker cp repo:/git/getting-started/ .
+history
+pwd
+ll
+ls -lrt
+cd getting-started/
+ll
+cd ../
+cd getting-started 
+ docker build -t docker101tutorial . 
+history
+docker images
+docker ps
+docker ps -a
+history |grep docker
+docker ps -i
+docker ps --help
+docker ps
+docker ps docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+docker ps
+docker tag docker101tutorial eldahni2019/docker101tutorial 
+docker push eldahni2019/docker101tutorial
