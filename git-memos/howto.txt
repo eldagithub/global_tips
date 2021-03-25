@@ -1,0 +1,9 @@
+on mac, to erase credential : 
+---
+git credential-osxkeychain erase
+host=github.com
+protocol=https
+---
+
+
+
