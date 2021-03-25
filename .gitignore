@@ -5,6 +5,7 @@
 *.tfstate
 *.tfstate.*
 my*.log
+my*.csv
 
 # Crash log files
 crash.log
