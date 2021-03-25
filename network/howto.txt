@@ -1,0 +1,11 @@
+Set-ExecutionPolicy RemoteSigned –scope CurrentUser
+
+https://kennethghartman.com/powershell-script-to-log-network-connections/#:~:text=The%20Log%2DConnections.,the%20script%20at%20run%20time.
+
+powershell .\Log-Connections.ps1 c:\workspace\mylog.csv
+powershell c:\Temp\Log-Connections.ps1 mylog.csv svchost
+powershell .\Log-Connections.ps1 mylog.csv svchost -PassThru
+
+.\Log-Connections.ps1 -ProcName svchost -Filepath mylog.csv
+.\Log-Connections.ps1 mylog.csv svchost -PassThru | Format-Table
+.\Log-Connections.ps1 mylog.csv Code -PassThru | Out-GridView
